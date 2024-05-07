@@ -4,7 +4,7 @@ on:
     inputs:
       lessons:
         default: 1
-        description: 'Number of lessons'
+        description: 'type smt and press enter'
         required: false
         type: number
    
@@ -14,7 +14,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4    
       - name: Run DuoXPy
-        run: python main.py
-        env:
-          JWT_TOKEN: ${{ secrets.JWT_TOKEN }}
-          LESSONS: ${{ inputs.lessons }}
+        run: python bot.py
